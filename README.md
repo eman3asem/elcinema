@@ -8,11 +8,5 @@ this project is a simulation for the website "elCinema.com" where I extracted th
 - flask
 - mysql
 
-## Languages
-- python
-- MySQL
-- HTML
-- CSS
-
 ## video of the website
 [elCinema Website](https://drive.google.com/file/d/18peBIo_xUaIl_4j96Ag7uzQMSzjUx2bL/view?usp=sharing)
