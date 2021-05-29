@@ -1,0 +1,11 @@
+database HOST:
+https://remotemysql.com/
+
+Database User:
+4C6VCCbEB2
+
+DataBase Password:
+rFusYnkNpu
+
+DataBase Name:
+4C6VCCbEB2

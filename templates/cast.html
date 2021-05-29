@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<img src={{cast['img']}}>
+<h2> {{cast['Name']}}</h2>
+<li> ID  {{cast['id']}} </li>
+<li> Country {{cast['Country']}} </li>
+<li> date of birth {{cast['date_of_birth']}} </li>
+<li> Biography <ul> {{cast['Biography']}} </ul> </li>
+<li> Movies  of the cast member<ol>
+{% for m in movies %}
+<a href="/{{m['id']}}"> <img src={{m['img']}}></a>
+<li> <a href="/{{m['id']}}"> {{m['Name']}} </a> role: {{m['Role']}} </li>
+{% endfor %}
+</ol>
+</li>
+</u>
+{% endblock %}

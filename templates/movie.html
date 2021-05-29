@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<img src={{movies['img']}}>
+<h2> {{movies['Name']}}</h2>
+<li> age rate {{movies['age_rate']}} </li>
+<li> Release Date  {{movies['Release_date']}} </li>
+<li> Revenue {{movies['Revenue']}} </li>
+<li> Duration {{movies['Duration']}} </li>
+<li> Rating {{movies['Rating']}} </li>
+<li> Description <ul> {{movies['Description']}} </ul> </li>
+<li> Genre
+{% for g in genre %}
+<lu> <a href="/movie/{{g['Genre']}}"> {{g['Genre']}} </a> </lu>
+{% endfor %}
+</li>
+<li> Cast <ol>
+{% for c in cast %}
+<a href="/cast/{{c['id']}}"> <img src={{c['img']}}></a>
+<li> <a href="/cast/{{c['id']}}"> {{c['Name']}} </a> {{c['Role']}} </li>
+{% endfor %}
+</ol>
+<li> Reviews <lu> <a href="/{{movies['id']}}/review"> write a review</a> <ol>
+{% for r in review %}
+<li> username: {{r['displayed_name']}}  <br />
+Rate: {{r['Rating']}} <br />
+Said: {{r['Review']}}
+</li>
+{% endfor %}
+</ol>
+
+</li>
+</u>
+{% endblock %}

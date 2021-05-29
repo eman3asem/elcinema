@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>{{genre[0]['Genre']}} Movies</h2>
+<ul>
+{% for g in genre %}
+<a href="/{{g['id']}}"> <img src={{g['img']}}></a>
+<li> <a href="/{{g['id']}}"> {{g['Name']}} </a> </li>
+{% endfor %}
+</u>
+{% endblock %}

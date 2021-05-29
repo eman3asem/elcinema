@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Top Revenue Movies</h2>
+<ul>
+{% for r in revenue %}
+<a href="/{{r['id']}}"> <img src={{r['img']}}></a>
+<li> <a href="/{{r['id']}}"> {{r['Name']}} </a> </li>
+<ul> revenue {{r['Revenue']}} pound </ul>
+{% endfor %}
+</u>
+{% endblock %}

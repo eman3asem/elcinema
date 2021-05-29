@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Home Page</h2>
+<p>Welcome back, {{ username }}!</p>
+<h1> Movies </h1>
+<ul>
+<li><a href="/Top_Revenue"> View top 10 revenue movies </a> </li>
+{% for m in movies %}
+<a href="/{{m['id']}}"> <img src={{m['img']}}></a>
+<li> <a href="/{{m['id']}}"> {{m['Name']}} </a> </li>
+{% endfor %}
+</u>
+{% endblock %}
